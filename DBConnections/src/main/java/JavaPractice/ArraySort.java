@@ -9,8 +9,14 @@ public class ArraySort {
     public static void main(String[] args) {
         int [] arr = {5, 4, 7, 1, 9, 1, 2, 8, 8, 3, 6, 0, 0, 120, 1, 155, 578, 4, 44, 57, 89, 56, 41, 21, 22, 32, 33, 34,35};
         ArraySort arraySort = new ArraySort();
+        long a = System.nanoTime();
         arraySort.sort(arr);
+        System.out.println((System.nanoTime() - a) * Math.pow(10, -9));
+        System.out.println(Arrays.toString(arr));
 
+        long b = System.nanoTime();
+        Arrays.sort(arr);
+        System.out.println((System.nanoTime() - b) * Math.pow(10, -9));
         System.out.println(Arrays.toString(arr));
         }
 
